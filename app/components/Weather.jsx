@@ -9,7 +9,7 @@ var Weather = React.createClass({
       isLoading: false
     }
   },
-  handleSearch: function(location) {
+  handleSearch: function (location) {
     // Have to create variable for 'this' before moving into function scope
     var that = this;
 
@@ -21,7 +21,7 @@ var Weather = React.createClass({
         temp: temp,
         isLoading: false
       });
-    }, function(errorMessage) {
+    }, function (errorMessage) {
       that.setState({isLoading: false});
       alert(errorMessage);
     });
@@ -43,7 +43,7 @@ var Weather = React.createClass({
         <WeatherForm  onSearch={this.handleSearch}/>
         {renderMessage()}
       </div>
-    );
+    )
   }
 });
 
