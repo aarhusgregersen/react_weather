@@ -9,11 +9,11 @@ var React = require('react');
 // });
 
 // Stateless functional component (Does the same as above)
-// This can only be done because there's no state
+// This can only be done because there's no state and the only content is return function
 var About = (props) => {
 	return (
 		<h3>About us</h3>
-	);
-}
+	)
+};
 
 module.exports = About;
