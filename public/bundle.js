@@ -26215,11 +26215,20 @@
 	// Stateless functional component
 	// This can only be done because there's no state and the only content is return function
 	var About = function About(props) {
-		return React.createElement(
-			'h3',
-			null,
-			'About us'
-		);
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'h3',
+	      null,
+	      'About'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'Welcome to the about page'
+	    )
+	  );
 	};
 
 	module.exports = About;
