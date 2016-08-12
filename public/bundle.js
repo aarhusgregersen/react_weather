@@ -26345,7 +26345,7 @@
 /* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -26353,17 +26353,41 @@
 	// This can only be done because there's no state and the only content is return function
 	var About = function About(props) {
 	  return React.createElement(
-	    'div',
+	    "div",
 	    null,
 	    React.createElement(
-	      'h3',
-	      null,
-	      'About'
+	      "h1",
+	      { className: "text-center" },
+	      "About"
 	    ),
 	    React.createElement(
-	      'p',
+	      "p",
 	      null,
-	      'Welcome to the about page'
+	      "This is my first try at a React app. This is a weather application built on React. "
+	    ),
+	    React.createElement(
+	      "p",
+	      null,
+	      "Here are some of the tools I used:"
+	    ),
+	    React.createElement(
+	      "ul",
+	      null,
+	      React.createElement(
+	        "li",
+	        null,
+	        "React"
+	      ),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "http://openweathermap.org" },
+	          "Open Weather Mapp"
+	        ),
+	        " - I used Open Weather Map to search for data based on city name"
+	      )
 	    )
 	  );
 	};
@@ -26391,7 +26415,7 @@
 	    null,
 	    React.createElement(
 	      'h1',
-	      { className: 'text-centered' },
+	      { className: 'text-center' },
 	      'Examples'
 	    ),
 	    React.createElement(
