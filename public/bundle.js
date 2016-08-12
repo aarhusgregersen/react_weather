@@ -24824,17 +24824,20 @@
 	var Nav = __webpack_require__(224);
 
 	var Main = function Main(props) {
-		return React.createElement(
-			'div',
-			null,
-			React.createElement(Nav, null),
-			React.createElement(
-				'h2',
-				null,
-				'Main Component'
-			),
-			props.children
-		);
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(Nav, null),
+	    React.createElement(
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
+	        'div',
+	        { className: 'columns small-centered medium-6 large-4' },
+	        props.children
+	      )
+	    )
+	  );
 	};
 
 	module.exports = Main;
@@ -26375,14 +26378,59 @@
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166);
+
+	var Link = _require.Link;
+
 	// Stateless functional component
 	// This can only be done because there's no state and the only content is return function
+
 	var Examples = function Examples(props) {
-		return React.createElement(
-			'h3',
-			null,
-			'Examples shown here'
-		);
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'h1',
+	      { className: 'text-centered' },
+	      'Examples'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'Here are a few sample locations to try out:'
+	    ),
+	    React.createElement(
+	      'ol',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Aalborg' },
+	          'Aalborg'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Viborg' },
+	          'Viborg'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Aarhus' },
+	          'Aarhus'
+	        )
+	      )
+	    )
+	  );
 	};
 
 	module.exports = Examples;
